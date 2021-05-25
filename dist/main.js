@@ -48,3 +48,10 @@ var s2 = vUnknown;
 var s3 = vUnknown;
 var pageNumber = "1";
 var numericPageNumber = pageNumber;
+var someElement = document.querySelector(".foo");
+console.log("someElement", someElement.value);
+var newElement = document.querySelector(".loo");
+newElement.addEventListener("blur", function (event) {
+    var target = event.target;
+    console.log("event", target.value);
+});
