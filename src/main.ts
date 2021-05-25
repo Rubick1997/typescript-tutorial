@@ -117,14 +117,25 @@ class User3 implements User3Interface {
   }
 }
 
+class User13 {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    readonly unchangableName: string
+  ) {}
+  getFullName(): string {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
 class Admin extends User3 {
   private editor: string;
 
   setEditor(editor: string): void {
     this.editor = editor;
   }
-  getEditor():string{
-      return this.editor
+  getEditor(): string {
+    return this.editor;
   }
 }
 let user12 = new User3("Rustam", "Kolumbayev");

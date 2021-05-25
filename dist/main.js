@@ -85,6 +85,17 @@ var User3 = /** @class */ (function () {
     User3.maxAge = 50; //something that you get on the class itself
     return User3;
 }());
+var User13 = /** @class */ (function () {
+    function User13(firstName, lastName, unchangableName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.unchangableName = unchangableName;
+    }
+    User13.prototype.getFullName = function () {
+        return this.firstName + " " + this.lastName;
+    };
+    return User13;
+}());
 var Admin = /** @class */ (function (_super) {
     __extends(Admin, _super);
     function Admin() {
