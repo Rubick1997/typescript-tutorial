@@ -48,7 +48,7 @@ var newUser = null;
 var doSomething = function () {
     console.log("Do Something");
 };
-//any is not recommended and shoul be avoided since it against the idea of TS functionality and turns off it checks
+//any is not recommended and should be avoided since it against the idea of TS functionality and turns off it checks
 var foo = 123;
 //never is something that will never happen
 var doSomething1 = function () {
@@ -58,7 +58,7 @@ var vAny = 10;
 var vUnknown = 10;
 var s1 = vAny;
 //we cannot assign unknown directly in other type
-var s2 = vUnknown;
+// let s2: string = vUnknown;
 //type assertion means that we want to convert one type to another(with as)
 var s3 = vUnknown;
 var pageNumber = "1";
@@ -77,7 +77,7 @@ var User3 = /** @class */ (function () {
         this.unchangableName = firstName;
     }
     User3.prototype.changeUnchangableName = function () {
-        this.unchangableName = "new Name";
+        // this.unchangableName = "new Name";
     };
     User3.prototype.getFullName = function () {
         return this.firstName + " " + this.lastName;

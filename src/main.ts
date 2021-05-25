@@ -59,7 +59,7 @@ const doSomething = (): any => {
   console.log("Do Something");
 };
 
-//any is not recommended and shoul be avoided since it against the idea of TS functionality and turns off it checks
+//any is not recommended and should be avoided since it against the idea of TS functionality and turns off it checks
 let foo: any = 123;
 
 //never is something that will never happen
@@ -73,7 +73,7 @@ let vUnknown: unknown = 10;
 let s1: string = vAny;
 
 //we cannot assign unknown directly in other type
-let s2: string = vUnknown;
+// let s2: string = vUnknown;
 
 //type assertion means that we want to convert one type to another(with as)
 let s3: string = vUnknown as string;
@@ -109,7 +109,7 @@ class User3 implements User3Interface {
   }
 
   changeUnchangableName() {
-    this.unchangableName = "new Name";
+    // this.unchangableName = "new Name";
   }
 
   getFullName(): string {
