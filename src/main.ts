@@ -90,3 +90,43 @@ newElement.addEventListener("blur", (event) => {
   const target = event.target as HTMLInputElement;
   console.log("event", target.value);
 });
+
+//classes is syntactic sugar for working with prototypes
+
+interface User3Interface {
+  getFullName(): string;
+}
+
+class User3 implements User3Interface {
+  firstName: string;
+  lastName: string;
+  readonly unchangableName: string;
+  static maxAge = 50; //something that you get on the class itself
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.unchangableName = firstName;
+  }
+
+  changeUnchangableName() {
+    this.unchangableName = "new Name";
+  }
+
+  getFullName(): string {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+class Admin extends User3 {
+  private editor: string;
+
+  setEditor(editor: string): void {
+    this.editor = editor;
+  }
+  getEditor():string{
+      return this.editor
+  }
+}
+let user12 = new User3("Rustam", "Kolumbayev");
+console.log(user12.getFullName);
+const admin = new Admin("foo", "nice"); //admin can access everything what was accessible at the User3 and Admin
