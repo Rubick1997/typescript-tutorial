@@ -10,9 +10,22 @@ var getFullName = function (name, lastName) {
 console.log(getFullName("Rustam", "Kolumbayev"));
 var user = {
     name: "Rustam",
-    age: 23
+    age: 23,
+    getMessage: function () {
+        return "Hello" + this.name;
+    }
 };
 var user2 = {
-    name: "Elon"
+    name: "Elon",
+    getMessage: function () {
+        return "Hello" + this.name;
+    }
 };
-console.log(user2.name);
+console.log(user2.getMessage());
+var popularTgs = ["dragon", "coffe"];
+var dragonsTag = "dragon";
+var usename = "Rustam";
+var pageName = "1"; //union operator or
+var errorMessaage = null;
+errorMessaage = "123";
+var newUser = null;
