@@ -45,7 +45,7 @@ interface User1Interface {
 }
 const popularTgs: PopularTag[] = ["dragon", "coffe"];
 
-const dragonsTag:MaybePopularTag = "dragon"
+const dragonsTag: MaybePopularTag = "dragon";
 
 let usename: string = "Rustam";
 let pageName: string | number = "1"; //union operator or
@@ -53,3 +53,30 @@ let errorMessaage: string | null = null;
 errorMessaage = "123";
 
 let newUser: UserInterface | null = null;
+
+//when we do not return anything it is void (undefined and null)
+const doSomething = (): any => {
+  console.log("Do Something");
+};
+
+//any is not recommended and shoul be avoided since it against the idea of TS functionality and turns off it checks
+let foo: any = 123;
+
+//never is something that will never happen
+const doSomething1 = (): never => {
+  throw Error;
+};
+
+let vAny: any = 10;
+let vUnknown: unknown = 10;
+
+let s1: string = vAny;
+
+//we cannot assign unknown directly in other type
+let s2: string = vUnknown;
+
+//type assertion means that we want to convert one type to another(with as)
+let s3: string = vUnknown as string;
+
+let pageNumber: string = "1";
+let numericPageNumber: number = pageNumber as unknown as number;
